@@ -1,10 +1,10 @@
 name: sonarcloud
 on:
   push:
-    branches:
-      - dev
+    branches: [ "dev" ]
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches: [ "dev" ]
+    
 jobs:
   sonarcloud:
     name: sonarcloud
