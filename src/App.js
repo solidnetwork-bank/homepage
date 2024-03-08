@@ -1,43 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import VirtualCreditCardAdd from './components/VirtualCreditCardAdd';
+import VirtualCreditCardDisplay from './components/VirtualCreditCardDisplay';
+import VirtualCreditCardList from './components/VirtualCreditCardList';
+import VirtualCreditCardRemove from './components/VirtualCreditCardRemove';
+import VirtualCreditCardUpdate from './components/VirtualCreditCardUpdate';
 
 function App() {
 
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
-        setPosts(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ul>
-      {posts.map(post => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
-      </header>
+      <h2>Options:</h2>
+      <p>My Virtual Credit Cards:</p>
+      <VirtualCreditCardList />
+      <p>Display my Virtual Credit Card information:</p>
+      <VirtualCreditCardDisplay />
+      <p>Request a new Virtual Credit Card:</p>
+      <VirtualCreditCardAdd />
+      <p>Remove a Virtual Credit Card:</p>
+      <VirtualCreditCardRemove />
+      <p>Generate a new Dynamic CVV:</p>
+      <VirtualCreditCardUpdate />
     </div>
   );
 }

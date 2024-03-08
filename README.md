@@ -44,22 +44,22 @@ npm install axios
 
 ### Virtual Credit Cards:
 
-- **list-virtual-credit-cards-service**
+- **list-virtual-credit-cards-service:** read-only microservice
 
 ```sh
-LIST - 'GET /virtual-credit-cards' - LIST ALL CREDIT CARDS (ACTIVATED STATUS)
+LIST - 'GET /virtual-credit-cards' - LIST ALL CREDIT CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
 ```
 ```sh
-READ - 'GET /virtual-credit-cards/{id}' - READ A CREDIT CARD
+READ - 'GET /virtual-credit-cards/{id}' - READ A CREDIT CARD (DISPLAY ALL INFORMATION OF A CREDIT CARD)
 ```
-- **manage-virtual-credit-cards-service**
+- **manage-virtual-credit-cards-service:** connected to a third party service
 
 ```sh
-CREATE - 'POST /virtual-credit-cards' - ADD VIRTUAL CREDIT CARD
+CREATE - 'POST /virtual-credit-cards' - ADD VIRTUAL CREDIT CARD (ASK FOR A NEW CREDIT CARD TO BE CREATED: 3RD PARTY SERVICES)
 ```
 ```sh
-UPDATE - 'PUT /virtual-credit-cards/{id}' - UPDATE A CREDIT CARD
+UPDATE - 'PUT /virtual-credit-cards/{id}' - UPDATE A CREDIT CARD (UPDATE DYNAMIC CVV)
 ```
 ```sh
-DELETE - 'DELETE /virtual-credit-cards/{id}' - HIDE A CREDIT CARD (DISACTIVATED STATUS)
+DELETE - 'DELETE /virtual-credit-cards/{id}' - REMOVE A CREDIT CARD (UPDATE TO DISACTIVATED STATUS)
 ```
