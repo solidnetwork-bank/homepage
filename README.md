@@ -39,3 +39,27 @@ npm test
 ```sh
 npm install axios
 ```
+
+### API and Microservices
+
+### Virtual Credit Cards:
+
+- **list-virtual-credit-cards-service**
+
+```sh
+LIST - 'GET /virtual-credit-cards' - LIST ALL CREDIT CARDS (ACTIVATED STATUS)
+```
+```sh
+READ - 'GET /virtual-credit-cards/{id}' - READ A CREDIT CARD
+```
+- **manage-virtual-credit-cards-service**
+
+```sh
+CREATE - 'POST /virtual-credit-cards' - ADD VIRTUAL CREDIT CARD
+```
+```sh
+UPDATE - 'PUT /virtual-credit-cards/{id}' - UPDATE A CREDIT CARD
+```
+```sh
+DELETE - 'DELETE /virtual-credit-cards/{id}' - HIDE A CREDIT CARD (DISACTIVATED STATUS)
+```
