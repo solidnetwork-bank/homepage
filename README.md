@@ -34,3 +34,8 @@ npm run build
 npm test
 ```
 
+## Make React API Calls
+
+```sh
+npm install axios
+```
