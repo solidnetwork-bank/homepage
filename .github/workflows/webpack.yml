@@ -1,5 +1,8 @@
 name: webpack
 
+env:
+  API_GATEWAY_STAGE: ${{ secrets.API_GATEWAY_STAGE }}
+
 on:
   push:
     branches: [ "dev" ]
