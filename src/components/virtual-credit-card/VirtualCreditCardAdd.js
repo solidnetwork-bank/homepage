@@ -1,7 +1,7 @@
 import React from 'react';
-import API from '../api';
+import API from './api';
 
-export default class VirtualCreditCardRemove extends React.Component {
+export default class VirtualCreditCardAdd extends React.Component {
   state = {
     id: ''
   }
@@ -13,7 +13,11 @@ export default class VirtualCreditCardRemove extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    API.delete(`/virtual-credit-cards/${this.state.id}`)
+    const card = {
+      id: this.state.id
+    };
+
+    API.post(`/virtual-credit-cards`, { card })
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -25,10 +29,10 @@ export default class VirtualCreditCardRemove extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Card ID:
-            <input type="number" name="id" onChange={this.handleChange} />
+            Person Id:
+            <input type="text" name="id" onChange={this.handleChange} />
           </label>
-          <button type="submit">Delete</button>
+          <button type="submit">Request</button>
         </form>
       </div>
     )
