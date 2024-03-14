@@ -86,12 +86,12 @@
     font-size: 20px;
 }
 
-.right-logo {
+.logo-anchor {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.right-image {
+.logo-image {
     width: clamp(90px, 20%, 150px);
 }

@@ -4,7 +4,7 @@ import {
 } from 'react';
 import '../static/styles/footer.css';
 import FooterOption from './FooterOption';
-import RightLogo from '../static/images/right-logo.png';
+import Logo from '../static/images/logo.png';
 import store from '../model/store';
 
 
@@ -22,11 +22,11 @@ export default class Footer extends Component {
 
                 </ul>
                 <a
-                    className='right-logo'
+                    className='logo-anchor'
                     rel='noreferrer'
                     href="https://bank.solidnetwork.xyz/"
                     target="_blank">
-                    <img alt="The Solid Network Bank" className="right-image" src={RightLogo} />
+                    <img alt="The Solid Network Bank" className="logo-image" src={Logo} />
                 </a>
             </footer>
 
