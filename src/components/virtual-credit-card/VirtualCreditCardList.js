@@ -1,7 +1,10 @@
-import React from 'react';
-import API from '../api';
+import {
+  React,
+  Component
+} from 'react';
+import API from './api';
 
-export default class VirtualCreditCardList extends React.Component {
+export default class VirtualCreditCardList extends Component {
   state = {
     cards: []
   }

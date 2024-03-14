@@ -1,7 +1,10 @@
-import React from 'react';
-import API from '../api';
+import {
+  React,
+  Component
+} from 'react';
+import API from './api';
 
-export default class VirtualCreditCardUpdate extends React.Component {
+export default class VirtualCreditCardUpdate extends Component {
   state = {
     id: '',
     cvv: ''
@@ -16,9 +19,9 @@ export default class VirtualCreditCardUpdate extends React.Component {
     event.preventDefault();
 
     const card = {
-        id: this.state.id,
-        cvv: this.state.cvv
-      };
+      id: this.state.id,
+      cvv: this.state.cvv
+    };
 
     API.put(`/virtual-credit-cards/${this.state.id}`, { card })
       .then(res => {
@@ -33,9 +36,9 @@ export default class VirtualCreditCardUpdate extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Card Id:
-            <input type="text" name="id" onChange={this.handleChange} />
+            <input type="text" name="card-id" onChange={this.handleChange} />
             Card new CVV:
-            <input type="text" name="cvv" onChange={this.handleChange} />
+            <input type="text" name="card-cvv" onChange={this.handleChange} />
           </label>
           <button type="submit">Update</button>
         </form>

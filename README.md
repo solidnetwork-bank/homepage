@@ -19,7 +19,7 @@ npm start
 ### Starts the development server.
 
  ```sh   
-npm start
+REACT_APP_API_GATEWAY_STAGE=<stage-name> npm start
 ```
 
 ### Bundles the app into static files for production.
