@@ -6,7 +6,8 @@ import API from './api';
 
 export default class VirtualCreditCardRemove extends Component {
   state = {
-    id: ''
+    id: '',
+    message: ''
   }
 
   handleChange = event => {
@@ -18,14 +19,15 @@ export default class VirtualCreditCardRemove extends Component {
 
     API.delete(`/virtual-credit-cards/${this.state.id}`)
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+        const dataRes = res.data.message;
+        this.setState({ message: dataRes })
       })
   }
 
   render() {
     return (
       <div>
+        <p>{this.state.message}</p>
         <form onSubmit={this.handleSubmit}>
           <label>
             Card ID:
