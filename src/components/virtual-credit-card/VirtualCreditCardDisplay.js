@@ -1,10 +1,13 @@
-import React from 'react';
-import API from '../../api';
+import {
+  React,
+  Component
+} from 'react';
+import API from './api';
 
-export default class VirtualCreditCardDisplay extends React.Component {
+export default class VirtualCreditCardDisplay extends Component {
   state = {
     card: {},
-    id:''
+    id: ''
   }
 
   handleChange = event => {
@@ -26,14 +29,14 @@ export default class VirtualCreditCardDisplay extends React.Component {
     return (
       <div>
         <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Card ID:
-            <input type="number" name="id" onChange={this.handleChange} />
-          </label>
-          <button type="submit">Display</button>
-        </form>
-      </div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Card ID:
+              <input type="number" name="card-id" onChange={this.handleChange} />
+            </label>
+            <button type="submit">Display</button>
+          </form>
+        </div>
         <div>
           <p>Card number: {this.state.card.number}</p>
           <p>Expiration date: {this.state.card.expiration}</p>

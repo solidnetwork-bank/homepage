@@ -4,9 +4,11 @@ import {
     HOME_HEADING,
     PROPOSAL_HEADING,
     EDITORIAL_HEADING,
+    VIRTUAL_CREDIT_CARD_HEADING,
     HOME_PATH,
     PROPOSAL_PATH,
-    EDITORIAL_PATH
+    EDITORIAL_PATH,
+    VIRTUAL_CREDIT_CARD_PATH
 } from '../model/store-const';
 
 export default function Menu() {
@@ -30,6 +32,7 @@ export default function Menu() {
                 <a className="menu-item" href={HOME_PATH}>{HOME_HEADING}</a>
                 <a className="menu-item" href={PROPOSAL_PATH}>{PROPOSAL_HEADING}</a>
                 <a className="menu-item" href={EDITORIAL_PATH}>{EDITORIAL_HEADING}</a>
+                <a className="menu-item" href={VIRTUAL_CREDIT_CARD_PATH}>{VIRTUAL_CREDIT_CARD_HEADING}</a>
             </div>
         </nav>
     );

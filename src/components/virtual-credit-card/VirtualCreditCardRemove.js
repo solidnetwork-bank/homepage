@@ -1,7 +1,10 @@
-import React from 'react';
-import API from '../../api';
+import {
+  React,
+  Component
+} from 'react';
+import API from './api';
 
-export default class VirtualCreditCardRemove extends React.Component {
+export default class VirtualCreditCardRemove extends Component {
   state = {
     id: ''
   }
@@ -26,7 +29,7 @@ export default class VirtualCreditCardRemove extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Card ID:
-            <input type="number" name="id" onChange={this.handleChange} />
+            <input type="number" name="card-id" onChange={this.handleChange} />
           </label>
           <button type="submit">Delete</button>
         </form>

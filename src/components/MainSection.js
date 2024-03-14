@@ -4,6 +4,7 @@ import {
 } from 'react';
 import Home from '../pages/Home';
 import Proposal from '../pages/Proposal';
+import VirtualCreditCard from '../pages/VirtualCreditCard';
 import '../static/styles/main-section.css';
 import {
   BrowserRouter,
@@ -14,9 +15,11 @@ import {
   HOME_HEADING,
   PROPOSAL_HEADING,
   EDITORIAL_HEADING,
+  VIRTUAL_CREDIT_CARD_HEADING,
   HOME_PATH,
   PROPOSAL_PATH,
   EDITORIAL_PATH,
+  VIRTUAL_CREDIT_CARD_PATH,
   ALL_PATH
 } from '../model/store-const';
 import store from '../model/store';
@@ -45,6 +48,7 @@ export default class MainSection extends Component {
                 data={store.editorial}
                 isOrder={false} />}
             />
+            <Route exact path={VIRTUAL_CREDIT_CARD_PATH} element={<VirtualCreditCard heading={VIRTUAL_CREDIT_CARD_HEADING} />} />
             <Route path={ALL_PATH} element={<Home heading={HOME_HEADING} />} />
           </Routes>
         </BrowserRouter>
