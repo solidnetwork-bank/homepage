@@ -1,5 +1,5 @@
 /* FOOTER */
-export const LAST_UPDATE = 'This websitw was edited las time on 29 Septiembre de 2022.';
+export const LAST_UPDATE = 'This page was last edited on 14 March 2024, at 14:01 (UTC).';
 
 /* HEADER */
 export const HEADER_NAME = 'SOLID NETWORK BANK';

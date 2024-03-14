@@ -43,9 +43,45 @@ function getTextRows(idx) {
 
     switch (idx) {
         case 1:
+
+            dataRows.push(
+                getRow(
+                    1,
+                    "This is paragraph One in text One."
+                )
+            );
+
+            dataRows.push(
+                getRow(
+                    2,
+                    "This is paragraph Two in text One."
+                )
+            );
+
             break;
 
         case 2:
+
+
+            dataRows.push(
+                getRow(
+                    1,
+                    "This is paragraph One in text Two."
+                )
+            );
+            dataRows.push(
+                getRow(
+                    2,
+                    "This is paragraph Two in text Two."
+                )
+            );
+            dataRows.push(
+                getRow(
+                    3,
+                    "This is paragraph Three in text Two."
+                )
+            );
+            
             break;
 
         default:
