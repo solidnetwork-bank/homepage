@@ -7,7 +7,8 @@ import API from './api';
 export default class VirtualCreditCardUpdate extends Component {
   state = {
     id: '',
-    cvv: ''
+    cvv: '',
+    message: ''
   }
 
   handleChange = event => {
@@ -25,14 +26,15 @@ export default class VirtualCreditCardUpdate extends Component {
 
     API.put(`/virtual-credit-cards/${this.state.id}`, { card })
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+        const dataRes = res.data.message;
+        this.setState({ message: dataRes })
       })
   }
 
   render() {
     return (
       <div>
+        <p>{this.state.message}</p>
         <form onSubmit={this.handleSubmit}>
           <label>
             Card Id:
