@@ -18,9 +18,9 @@ export default class Proposal extends Component {
 
                     <p className='main-section-heading'>{this.props.heading}</p>
 
-                    <div className='main-section-proposal'>
+                    <div className='proposal-main-section'>
 
-                        <ol className='main-section-proposal-list'>
+                        <ol className='proposal-list-main-section'>
 
                             {
                                 this.props.data.map((proposalRow) =>
@@ -56,9 +56,9 @@ export default class Proposal extends Component {
 
                     <p className='main-section-heading'>{this.props.heading}</p>
 
-                    <div className='main-section-proposal'>
+                    <div className='proposal-main-section'>
 
-                        <ul className='main-section-proposal-un-list'>
+                        <ul className='proposal-un-list-main-section'>
 
                             {
                                 this.props.data.map((proposalRow) =>

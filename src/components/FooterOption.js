@@ -2,7 +2,7 @@ import {
     React,
     Component
 } from 'react';
-
+import '../static/styles/footer-option.css';
 
 export default class FooterOption extends Component {
 

@@ -17,7 +17,7 @@ export default class Home extends Component {
 
                 <p className='main-section-heading'>{this.props.heading}</p>
 
-                <div className='main-section-content'>
+                <div className='home-page-content'>
 
                     {
                         store.news.map((dataRow) =>

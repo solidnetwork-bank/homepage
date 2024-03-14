@@ -2,7 +2,7 @@ import {
     React,
     Component
 } from 'react';
-
+import '../static/styles/text-row.css';
 
 export default class TextRow extends Component {
 
@@ -10,7 +10,7 @@ export default class TextRow extends Component {
 
         return (
 
-            <p className='content-text'>
+            <p className='text-row-content-text'>
                 {this.props.content}
             </p>
 
