@@ -16,7 +16,7 @@ export default class VirtualCreditCardRemove extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    API.delete(`/virtual-credit-cards/${this.state.id}`)
+    API.delete(`virtual-credit-cards/${this.state.id}`)
       .then(res => {
         this.props.updateMessage(res.data.message)
       })

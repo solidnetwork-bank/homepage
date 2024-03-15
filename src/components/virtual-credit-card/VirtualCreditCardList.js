@@ -10,7 +10,7 @@ export default class VirtualCreditCardList extends Component {
   }
 
   componentDidMount() {
-    API.get(`/virtual-credit-cards`)
+    API.get(`virtual-credit-cards`)
       .then(res => {
         const cards = res.data;
         this.setState({ cards });
