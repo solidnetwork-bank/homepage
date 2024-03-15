@@ -5,6 +5,7 @@ import {
 import Home from '../pages/Home';
 import Proposal from '../pages/Proposal';
 import VirtualCreditCard from '../pages/VirtualCreditCard';
+import Statement from '../pages/Statement'
 import '../static/styles/main-section.css';
 import {
   BrowserRouter,
@@ -16,10 +17,12 @@ import {
   PROPOSAL_HEADING,
   EDITORIAL_HEADING,
   VIRTUAL_CREDIT_CARD_HEADING,
+  STATEMENT_HEADING,
   HOME_PATH,
   PROPOSAL_PATH,
   EDITORIAL_PATH,
   VIRTUAL_CREDIT_CARD_PATH,
+  STATEMENT_PATH,
   ALL_PATH
 } from '../model/store-const';
 import store from '../model/store';
@@ -49,6 +52,7 @@ export default class MainSection extends Component {
                 isOrder={false} />}
             />
             <Route exact path={VIRTUAL_CREDIT_CARD_PATH} element={<VirtualCreditCard heading={VIRTUAL_CREDIT_CARD_HEADING} />} />
+            <Route exact path={STATEMENT_PATH} element={<Statement heading={STATEMENT_HEADING} />} />
             <Route path={ALL_PATH} element={<Home heading={HOME_HEADING} />} />
           </Routes>
         </BrowserRouter>

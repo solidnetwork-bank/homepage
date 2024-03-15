@@ -23,7 +23,7 @@ export default class VirtualCreditCardUpdate extends Component {
       cvv: this.state.cvv
     };
 
-    API.put(`/virtual-credit-cards/${this.state.id}`, { card })
+    API.put(`virtual-credit-cards/${this.state.id}`, { card })
       .then(res => {
         this.props.updateMessage(res.data.message)
       })

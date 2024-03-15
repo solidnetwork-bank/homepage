@@ -17,7 +17,7 @@ export default class VirtualCreditCardDisplay extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    API.get(`/virtual-credit-cards/${this.state.id}`)
+    API.get(`virtual-credit-cards/${this.state.id}`)
       .then(res => {
         const card = res.data;
         this.setState({ card });
