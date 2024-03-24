@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import "../static/styles/menu.css";
 import {
-    HOME_HEADING,
-    PROPOSAL_HEADING,
     EDITORIAL_HEADING,
-    VIRTUAL_CREDIT_CARD_HEADING,
-    STATEMENT_HEADING,
-    HOME_PATH,
-    PROPOSAL_PATH,
     EDITORIAL_PATH,
-    VIRTUAL_CREDIT_CARD_PATH,
-    STATEMENT_PATH
+    HOME_HEADING,
+    HOME_PATH,
+    PROPOSAL_HEADING,
+    PROPOSAL_PATH
 } from '../model/store-const';
+import "../static/styles/menu.css";
 import { PROTECTED_PAGE_ENDPOINT } from "./components-const";
 
 export default function Menu() {
