@@ -12,6 +12,7 @@ import {
     VIRTUAL_CREDIT_CARD_PATH,
     STATEMENT_PATH
 } from '../model/store-const';
+import { PROTECTED_PAGE_ENDPOINT } from "./components-const";
 
 export default function Menu() {
 
@@ -34,9 +35,7 @@ export default function Menu() {
                 <a className="menu-item" href={HOME_PATH}>{HOME_HEADING}</a>
                 <a className="menu-item" href={PROPOSAL_PATH}>{PROPOSAL_HEADING}</a>
                 <a className="menu-item" href={EDITORIAL_PATH}>{EDITORIAL_HEADING}</a>
-                <a className="menu-item" href={VIRTUAL_CREDIT_CARD_PATH}>{VIRTUAL_CREDIT_CARD_HEADING}</a>
-                <a className="menu-item" href={STATEMENT_PATH}>{STATEMENT_HEADING}</a>
-                <a className="menu-item" href="/investment/roi">Investments</a>
+                <a className="menu-item" href={PROTECTED_PAGE_ENDPOINT}>Log In</a>
             </div>
         </nav>
     );
